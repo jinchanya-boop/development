@@ -531,8 +531,8 @@
                 </span>
             </a>
 
-            <!-- MENU 2: REPORT (DEVELOPING) -->
-            <div class="menu-card disabled">
+            <!-- MENU 2: REPORT -->
+            <a href="https://jinchanya-boop.github.io/report/" class="menu-card" style="text-decoration: none;">
                 <div class="menu-icon-container">
                     <i class="fas fa-file-contract menu-icon"></i>
                 </div>
@@ -541,10 +541,10 @@
                     ส่งรายงานผลการพัฒนาตนเองตามแผนที่วางไว้<br>
                     สรุปผลและประเมินการดำเนินงาน
                 </p>
-                <span class="menu-status developing">
-                    <i class="fas fa-code"></i> กำลังพัฒนา
+                <span class="menu-status available">
+                    <i class="fas fa-check-circle"></i> พร้อมใช้งาน
                 </span>
-            </div>
+            </a>
 
         </div>
 
@@ -569,7 +569,7 @@
                 </li>
                 <li>
                     <i class="fas fa-arrow-right"></i>
-                    <span>ระบบ <strong>"ส่งรายงานการพัฒนาตนเอง"</strong> อยู่ระหว่างการพัฒนา จะเปิดให้บริการในเร็วๆ นี้</span>
+                    <span>ระบบ <strong>"ส่งรายงานการพัฒนาตนเอง"</strong> พร้อมให้บริการแล้ว คลิกเมนูด้านบนเพื่อใช้งาน</span>
                 </li>
                 <li>
                     <i class="fas fa-arrow-right"></i>
@@ -591,33 +591,6 @@
     </footer>
 
     <script>
-        // Add click effect for disabled card
-        document.querySelectorAll('.menu-card.disabled').forEach(card => {
-            card.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Shake animation
-                this.style.animation = 'none';
-                setTimeout(() => {
-                    this.style.animation = 'shake 0.5s ease';
-                }, 10);
-
-                // Show alert
-                alert('⚙️ ระบบกำลังอยู่ระหว่างการพัฒนา\n\nจะเปิดให้บริการในเร็วๆ นี้');
-            });
-        });
-
-        // Add shake animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes shake {
-                0%, 100% { transform: translateX(0); }
-                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-                20%, 40%, 60%, 80% { transform: translateX(5px); }
-            }
-        `;
-        document.head.appendChild(style);
-
         // Add smooth scroll effect
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
